@@ -1,0 +1,56 @@
+{
+  "collectionName": "components_basic_packings",
+  "info": {
+    "name": "Packing",
+    "icon": "box-open",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "productPackingMethod": {
+      "type": "enumeration",
+      "enum": [
+        "plastic_bag",
+        "color_box",
+        "gift_box",
+        "white_box",
+        "brown_box",
+        "tie_on_card",
+        "hang_tag",
+        "blister_card",
+        "shrink",
+        "craft_paper",
+        "tissue_paper"
+      ]
+    },
+    "innerBoxQTY": {
+      "type": "integer"
+    },
+    "innerBoxSize": {
+      "type": "string"
+    },
+    "cartonGW": {
+      "type": "integer"
+    },
+    "cartonNW": {
+      "type": "integer"
+    },
+    "cartonQTY": {
+      "type": "integer"
+    },
+    "cartonSize": {
+      "type": "string"
+    },
+    "unit": {
+      "type": "enumeration",
+      "enum": [
+        "pc",
+        "set",
+        "doz"
+      ]
+    },
+    "hasInnerBox": {
+      "type": "boolean"
+    }
+  }
+}

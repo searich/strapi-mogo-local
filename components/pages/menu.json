@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_pages_menus",
+  "info": {
+    "name": "menu",
+    "icon": "anchor",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cover": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "goTo": {
+      "type": "string"
+    },
+    "categories": {
+      "collection": "category"
+    }
+  }
+}

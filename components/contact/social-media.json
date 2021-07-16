@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_contact_social_medias",
+  "info": {
+    "name": "socialMedia",
+    "icon": "comment-dots"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "LinkedIn",
+        "Whatsapp",
+        "Facebook",
+        "Instagram",
+        "WeChat",
+        "Skype",
+        "Youtube"
+      ]
+    },
+    "account": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

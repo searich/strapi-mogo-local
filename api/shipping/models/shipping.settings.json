@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shippings",
+  "info": {
+    "name": "shipping",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "number": {
+      "type": "string"
+    },
+    "customer": {
+      "via": "shippings",
+      "model": "company"
+    },
+    "pos": {
+      "via": "shippings",
+      "collection": "po",
+      "dominant": true
+    },
+    "loading": {
+      "type": "component",
+      "repeatable": true,
+      "component": "basic.logistic"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "bookingNumber": {
+      "type": "string"
+    },
+    "shippingNumber": {
+      "type": "string"
+    },
+    "suppliers": {
+      "via": "delivery",
+      "collection": "company",
+      "dominant": true
+    },
+    "amountReceived": {
+      "collection": "finance",
+      "via": "shippings"
+    },
+    "forwarder": {
+      "via": "shippingOperation",
+      "model": "company"
+    }
+  }
+}

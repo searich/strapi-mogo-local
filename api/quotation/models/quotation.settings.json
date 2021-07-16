@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quotations",
+  "info": {
+    "name": "quotation",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "product",
+        "tooling",
+        "sample"
+      ]
+    },
+    "company": {
+      "model": "company",
+      "via": "quotations"
+    },
+    "number": {
+      "type": "string"
+    },
+    "terms": {
+      "type": "enumeration",
+      "enum": [
+        "fob",
+        "exw",
+        "cif",
+        "cnf"
+      ]
+    },
+    "loadingPort": {
+      "type": "string"
+    },
+    "product": {
+      "type": "component",
+      "repeatable": true,
+      "component": "basic.item"
+    }
+  }
+}

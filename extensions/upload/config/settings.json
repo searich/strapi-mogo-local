@@ -1,0 +1,12 @@
+{
+    "provider": "qiniu",
+    "providerOptions": {
+      "accessKey": "w2VFTudkPQHSnEXbHXIIADjR9iWLcKBITJMbQDye",
+      "secretKey": "IEobu6iw2i7Sgc4MSdV7psvjxUm_BhC2nmDMmdls",
+      "bucket": "qnlocalimgs",
+      "publicBucketDomain": "http://qncdn.cloud.searichhome.cn",
+      "appendFileExtInKey": "yes",
+      "zone": "qiniu.zone.Zone_z2",
+      "prefix": "products"
+     }
+}

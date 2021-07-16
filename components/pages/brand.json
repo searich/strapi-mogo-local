@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_pages_brands",
+  "info": {
+    "name": "brand",
+    "icon": "frog",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "slogon": {
+      "type": "string"
+    },
+    "goTo": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "collectionName": "components_basic_addresses",
+  "info": {
+    "name": "Address",
+    "icon": "map-marker-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "building": {
+      "type": "string"
+    },
+    "street": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "country": {
+      "type": "enumeration",
+      "enum": [
+        "Austria",
+        "Australia",
+        "Brasil",
+        "Canada",
+        "Denmark",
+        "Finland",
+        "France",
+        "Germany",
+        "HongKong",
+        "Ireland",
+        "Israel",
+        "Italy",
+        "Japan",
+        "Korean",
+        "Netherlands",
+        "New_Zealand",
+        "Norway",
+        "UK",
+        "USA",
+        "Russia",
+        "Singapore",
+        "Spain",
+        "Sweden",
+        "Switzerland",
+        "Taiwan",
+        "Turkey"
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_pages_navlinks",
+  "info": {
+    "name": "navlink",
+    "icon": "link",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "navtitle": {
+      "type": "string"
+    },
+    "menu": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pages.menu"
+    },
+    "hasMenu": {
+      "type": "boolean",
+      "default": true
+    },
+    "goTo": {
+      "type": "string"
+    }
+  }
+}

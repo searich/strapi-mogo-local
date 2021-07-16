@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_basic_logistics",
+  "info": {
+    "name": "Logistic",
+    "icon": "dolly-flatbed",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "LCL",
+        "FCL"
+      ]
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "cube": {
+      "type": "decimal"
+    },
+    "payload": {
+      "type": "decimal"
+    },
+    "cartons": {
+      "type": "integer"
+    },
+    "conatinerType": {
+      "type": "string"
+    },
+    "containerNumber": {
+      "type": "string"
+    },
+    "goodsName": {
+      "type": "string"
+    },
+    "loadingDate": {
+      "type": "date"
+    }
+  }
+}

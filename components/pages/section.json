@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_pages_sections",
+  "info": {
+    "name": "section",
+    "icon": "cloud-meatball"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subHeading": {
+      "type": "text"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "cover": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "goTo": {
+      "type": "string"
+    }
+  }
+}

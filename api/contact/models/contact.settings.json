@@ -1,0 +1,95 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contacts",
+  "info": {
+    "name": "contact",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "customer",
+        "supplier",
+        "forwarder",
+        "employee",
+        "exhibition"
+      ]
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "company": {
+      "model": "company",
+      "via": "contacts"
+    },
+    "phone": {
+      "type": "component",
+      "repeatable": true,
+      "component": "contact.phone"
+    },
+    "email": {
+      "type": "component",
+      "repeatable": true,
+      "component": "contact.web-info"
+    },
+    "department": {
+      "type": "enumeration",
+      "enum": [
+        "purchasing",
+        "sales",
+        "management",
+        "administration",
+        "inspection",
+        "technic",
+        "design",
+        "logistic"
+      ]
+    },
+    "title": {
+      "type": "enumeration",
+      "enum": [
+        "merchandiser",
+        "buyer",
+        "manager",
+        "designer",
+        "QC",
+        "CEO",
+        "CFO",
+        "owner"
+      ]
+    },
+    "socialMedia": {
+      "type": "component",
+      "repeatable": true,
+      "component": "contact.social-media"
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "MS",
+        "Miss",
+        "Mr"
+      ]
+    }
+  }
+}

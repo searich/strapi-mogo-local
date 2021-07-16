@@ -1,0 +1,86 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pos",
+  "info": {
+    "name": "po",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "number": {
+      "type": "string"
+    },
+    "customers": {
+      "model": "company",
+      "via": "pos"
+    },
+    "deliveryDate": {
+      "type": "date"
+    },
+    "payment": {
+      "type": "string"
+    },
+    "file": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "product": {
+      "type": "component",
+      "repeatable": true,
+      "component": "basic.item"
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "term": {
+      "type": "enumeration",
+      "enum": [
+        "fob",
+        "exw",
+        "cif",
+        "cnf"
+      ]
+    },
+    "shippings": {
+      "collection": "shipping",
+      "via": "pos"
+    },
+    "amountReceived": {
+      "collection": "finance",
+      "via": "pos"
+    },
+    "destination": {
+      "type": "enumeration",
+      "enum": [
+        "Arghus",
+        "Hamburg",
+        "Rotterdam"
+      ]
+    },
+    "portOfShipment": {
+      "type": "enumeration",
+      "enum": [
+        "hongkong",
+        "yantian",
+        "shenzhen",
+        "shanghai",
+        "ningbo",
+        "shunde"
+      ]
+    },
+    "partialShipment": {
+      "type": "boolean"
+    }
+  }
+}

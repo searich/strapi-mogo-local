@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "finances",
+  "info": {
+    "name": "finance",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "income",
+        "payment",
+        "bill",
+        "tax"
+      ]
+    },
+    "number": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "currency": {
+      "type": "enumeration",
+      "enum": [
+        "USD",
+        "CNY",
+        "EUR"
+      ]
+    },
+    "method": {
+      "type": "enumeration",
+      "enum": [
+        "lc",
+        "tt",
+        "deposit",
+        "balance",
+        "cash",
+        "check",
+        "paypal",
+        "credit_card"
+      ]
+    },
+    "customer": {
+      "via": "income",
+      "model": "company"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "revenue",
+        "tooling",
+        "refund",
+        "deposit",
+        "purchase_prepayment",
+        "purchase_payment",
+        "tax"
+      ]
+    },
+    "pos": {
+      "via": "amountReceived",
+      "collection": "po",
+      "dominant": true
+    },
+    "shippings": {
+      "via": "amountReceived",
+      "collection": "shipping",
+      "dominant": true
+    }
+  }
+}

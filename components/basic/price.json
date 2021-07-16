@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_basic_prices",
+  "info": {
+    "name": "Price",
+    "icon": "dollar-sign",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "quotation",
+        "sale",
+        "purchase",
+        "shopify",
+        "amazon"
+      ]
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "validDate": {
+      "type": "date"
+    },
+    "currency": {
+      "type": "enumeration",
+      "enum": [
+        "USD",
+        "CNY",
+        "EUR"
+      ]
+    }
+  }
+}

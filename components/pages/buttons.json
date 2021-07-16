@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_pages_buttons",
+  "info": {
+    "name": "button",
+    "icon": "asterisk",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    }
+  }
+}

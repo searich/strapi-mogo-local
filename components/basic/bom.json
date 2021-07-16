@@ -1,0 +1,101 @@
+{
+  "collectionName": "components_basic_boms",
+  "info": {
+    "name": "Bom",
+    "icon": "sitemap",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "string"
+    },
+    "material": {
+      "type": "string"
+    },
+    "size": {
+      "type": "string"
+    },
+    "weight": {
+      "type": "decimal"
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "nature",
+        "chrome",
+        "white",
+        "black",
+        "silver",
+        "golden",
+        "red",
+        "orange",
+        "yellow",
+        "green",
+        "blue",
+        "purple"
+      ]
+    },
+    "finish": {
+      "type": "enumeration",
+      "enum": [
+        "matt",
+        "mirror",
+        "gloss",
+        "chrome"
+      ]
+    },
+    "processMethod": {
+      "type": "string"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "purchasePrice": {
+      "type": "decimal"
+    },
+    "packing": {
+      "type": "enumeration",
+      "enum": [
+        "plastic_bag",
+        "bubble_bag",
+        "box"
+      ]
+    },
+    "unit": {
+      "type": "enumeration",
+      "enum": [
+        "pc",
+        "gram",
+        "set"
+      ]
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "weightUnit": {
+      "type": "enumeration",
+      "enum": [
+        "g",
+        "kg"
+      ]
+    },
+    "sizeUnit": {
+      "type": "enumeration",
+      "enum": [
+        "mm",
+        "cm",
+        "m",
+        "inch"
+      ]
+    }
+  }
+}

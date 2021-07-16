@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_basic_items",
+  "info": {
+    "name": "item",
+    "icon": "project-diagram",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "product": {
+      "model": "products"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "specification": {
+      "type": "richtext"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "unit": {
+      "type": "enumeration",
+      "enum": [
+        "pc",
+        "set",
+        "doz"
+      ]
+    },
+    "currency": {
+      "type": "enumeration",
+      "enum": [
+        "USD",
+        "CNY",
+        "EUR"
+      ]
+    },
+    "packing": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.packing"
+    }
+  }
+}

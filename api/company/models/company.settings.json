@@ -1,0 +1,134 @@
+{
+  "kind": "collectionType",
+  "collectionName": "companies",
+  "info": {
+    "name": "company",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "customer",
+        "supplier",
+        "forwarder",
+        "bank"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "range": {
+      "type": "enumeration",
+      "enum": [
+        "importer",
+        "wholesaler",
+        "departmentStore",
+        "retailer",
+        "agent",
+        "eCommerce",
+        "factory",
+        "individual",
+        "insurance",
+        "bank",
+        "inspection",
+        "shipping",
+        "logistic",
+        "software"
+      ]
+    },
+    "brand": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "contacts": {
+      "via": "company",
+      "collection": "contact"
+    },
+    "quotations": {
+      "via": "company",
+      "collection": "quotation"
+    },
+    "shippings": {
+      "collection": "shipping",
+      "via": "customer"
+    },
+    "delivery": {
+      "collection": "shipping",
+      "via": "suppliers"
+    },
+    "income": {
+      "collection": "finance",
+      "via": "customer"
+    },
+    "shippingOperation": {
+      "collection": "shipping",
+      "via": "forwarder"
+    },
+    "address": {
+      "type": "component",
+      "repeatable": true,
+      "component": "contact.address"
+    },
+    "phone": {
+      "type": "component",
+      "repeatable": true,
+      "component": "contact.phone"
+    },
+    "website": {
+      "type": "component",
+      "repeatable": false,
+      "component": "contact.web-info"
+    },
+    "cuntry": {
+      "type": "enumeration",
+      "enum": [
+        "Austria",
+        "Australia",
+        "Brasil",
+        "Canada",
+        "Denmark",
+        "Finland",
+        "France",
+        "Germany",
+        "HongKong",
+        "Ireland",
+        "Israel",
+        "Italy",
+        "Japan",
+        "Korean",
+        "Netherlands",
+        "New_Zealand",
+        "Norway",
+        "UK",
+        "USA",
+        "Russia",
+        "Singapore",
+        "Spain",
+        "Sweden",
+        "Switzerland",
+        "Taiwan",
+        "Turkey"
+      ]
+    },
+    "pos": {
+      "via": "customers",
+      "collection": "po"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_pages_headers",
+  "info": {
+    "name": "header",
+    "icon": "allergies",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "brand": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pages.brand"
+    },
+    "navlink": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pages.navlink"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_contact_web_infos",
+  "info": {
+    "name": "webInfo",
+    "icon": "mail-bulk"
+  },
+  "options": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "website": {
+      "type": "string"
+    }
+  }
+}

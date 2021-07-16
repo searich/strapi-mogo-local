@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_contact_phones",
+  "info": {
+    "name": "phone",
+    "icon": "phone-square"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "telephone",
+        "mobile",
+        "fax"
+      ]
+    },
+    "number": {
+      "type": "string"
+    }
+  }
+}

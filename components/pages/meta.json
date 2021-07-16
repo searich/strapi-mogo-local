@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_pages_metas",
+  "info": {
+    "name": "meta",
+    "icon": "space-shuttle",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "value": {
+      "type": "text"
+    }
+  }
+}

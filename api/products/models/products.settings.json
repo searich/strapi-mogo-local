@@ -1,0 +1,69 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "products",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "itemNo": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "default": "111001"
+    },
+    "name": {
+      "type": "string"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "category": {
+      "model": "category",
+      "via": "products"
+    },
+    "cname": {
+      "type": "string"
+    },
+    "onOfficialWebsite": {
+      "type": "boolean"
+    },
+    "onShopify": {
+      "type": "boolean"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cdescription": {
+      "type": "text"
+    },
+    "unitPrice": {
+      "type": "component",
+      "repeatable": true,
+      "component": "basic.price"
+    },
+    "packing": {
+      "type": "component",
+      "repeatable": true,
+      "component": "basic.packing"
+    },
+    "bom": {
+      "type": "component",
+      "repeatable": true,
+      "component": "basic.bom"
+    }
+  }
+}
